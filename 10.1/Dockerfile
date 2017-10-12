@@ -30,6 +30,5 @@ ENV ALLOW_EMPTY_PASSWORD="no" \
 
 EXPOSE 3306
 
-USER 1001
 ENTRYPOINT ["/app-entrypoint.sh"]
 CMD ["/run.sh"]
