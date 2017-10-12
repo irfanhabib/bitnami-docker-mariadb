@@ -19,6 +19,9 @@ if [[ -n $MARIADB_REPLICATION_MODE ]]; then
   esac
 fi
 
+# Set permissions on /bitnami
+chown -R mysql:mysql /bitnami/mariadb
+
 # configure extra command line flags
 if [[ -n $MARIADB_EXTRA_FLAGS ]]; then
     ARGS+=" $MARIADB_EXTRA_FLAGS"
